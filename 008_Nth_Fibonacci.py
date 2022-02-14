@@ -27,3 +27,15 @@ def getNthFib3(n):
         lastTwo[1] = nextFib
         counter += 1
     return lastTwo[1] if n > 1 else lastTwo[0]
+
+
+# O(1) time | O(1) space
+import math
+def fib(n):
+    res = (((1 + math.sqrt(5))/2)**n - ((1 - math.sqrt(5))/2)**n)/math.sqrt(5)
+    return res
+
+res = round(fib(1020))
+res2 = math.log(res, 10)
+res3 = math.floor(res2) + 1
+print(res)
